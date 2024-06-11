@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Calendar{% endblock %}
+
+{% block content %}
+<h2>Your Diary Entries</h2>
+{% for entry in entries %}
+    <div>
+        <h3>{{ entry.date_posted.strftime('%Y-%m-%d') }}</h3>
+        <p>{{ entry.content }}</p>
+        {% if entry.image_file %}
+            <img src="{{ url_for('static', filename='uploads/' + entry.image_file) }}" alt="Entry Image">
+        {% endif %}
+        <a href="{{ url_for('update_entry', entry_id=entry.id) }}">Edit</a>
+        <form action="{{ url_for('delete_entry', entry_id=entry.id) }}" method="POST" style="display:inline;">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+{% endfor %}
+{% endblock %}
+
+
+

@@ -1,0 +1,54 @@
+/* style.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Index Page Styles */
+.index-background {
+    background-color:white;
+    padding: 50px 0;
+}
+
+.index-background h1 {
+    font-size: 36px;
+    color:white;
+}
+
+.index-background p {
+    font-size: 18px;
+    color: white;
+}
+
+/* Alert Styles */
+.alert {
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+
+
+
+
